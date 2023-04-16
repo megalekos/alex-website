@@ -16,8 +16,8 @@ document.addEventListener("scroll", function () {
   //   console.log(isInViewport(box));
 
   if (isInViewport(box)) {
-    console.log("The box is visible in the viewport");
+    freelance_button.style.visibility = "hidden";
   } else {
-    console.log("The box is not visible in the viewport");
+    freelance_button.style.visibility = "visible";
   }
 });
