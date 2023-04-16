@@ -33,6 +33,7 @@ img {
   display: grid;
   justify-items: center;
   grid-column: 2;
+  grid-template-columns: 1fr 1fr;
 }
 header {
   display: grid;
@@ -111,6 +112,16 @@ nav a {
   place-self: center;
   text-align: center;
 }
+
+#freelance-section {
+  place-self: center;
+  text-align: center;
+  grid-column-start: 2;
+  background-color: #a1ff99;
+  border-radius: 24px;
+  padding: 50px;
+}
+
 #close-off {
   grid-column: 2;
 }
