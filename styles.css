@@ -105,9 +105,17 @@ nav a {
   word-break: keep-all;
 }
 
+.span2 {
+  grid-column: span 2;
+}
+
 #title-section h1 {
   place-self: center;
   text-align: center;
+}
+
+#spider-section {
+  gap: 1rem;
 }
 
 #freelance-section {
@@ -138,12 +146,19 @@ nav a {
   }
 
   .project {
-    grid-template-columns: 1fr 3fr 1fr;
+    /* grid-template-columns: 1fr 3fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .project > * {
+  /* .project > * {
     grid-column-start: 2;
-    grid-column-end: span 1;
+    grid-column-end: span 2;
+  } */
+  #spider-section p {
+    grid-column-start: 2;
+  }
+  #spider-section img {
+    grid-column-start: 3;
   }
 
   #freelance-section p {
