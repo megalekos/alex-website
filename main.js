@@ -1,3 +1,4 @@
+//hide and show freelance button
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
@@ -20,4 +21,17 @@ document.addEventListener("scroll", function () {
   } else {
     freelance_button.style.visibility = "visible";
   }
+});
+
+//open and close modal
+const modal = document.querySelector(".modal");
+const openModal = document.querySelector("#freelance-button");
+const closeModal = document.querySelector("#close-button");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
 });

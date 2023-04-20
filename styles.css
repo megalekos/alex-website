@@ -72,7 +72,7 @@ header {
   position: fixed;
   top: 10vh;
   right: 10vw;
-
+  cursor: pointer;
   background-color: #a1ff99;
   border-radius: 100%;
   width: 137px;
@@ -81,6 +81,54 @@ header {
   border: none;
 
   font-size: 1rem;
+}
+
+.modal[open] {
+  padding: 3rem;
+  margin-inline: auto;
+  margin-top: 10vh;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.modal::backdrop {
+  background-color: #3976a7;
+  opacity: 0.7;
+}
+
+.modal h1 {
+  grid-column: 2/3;
+}
+
+.service {
+  grid-row-start: 2;
+}
+
+.modal a {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  font-size: 2rem;
+}
+
+.or_rightclick {
+  font-size: 70%;
+}
+
+#close-button {
+  cursor: pointer;
+  max-width: fit-content;
+  font-size: 1rem;
+  max-height: 1rem;
+  padding: 0 1rem 1.3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #3976a7;
+  color: white;
+  border: none;
+  border-radius: 24px;
 }
 
 nav {
