@@ -17,18 +17,23 @@ document.addEventListener("scroll", function () {
   //   console.log(isInViewport(box));
 
   if (isInViewport(box)) {
-    freelance_button.style.visibility = "hidden";
+    freelance_button.classList.add("disappear");
   } else {
-    freelance_button.style.visibility = "visible";
+    freelance_button.classList.remove("disappear");
   }
 });
 
 //open and close modal
 const modal = document.querySelector(".modal");
-const openModal = document.querySelector("#freelance-button");
+const freeBtn = document.querySelector("#freelance-button");
+const checkService = document.querySelector("#check-service");
 const closeModal = document.querySelector("#close-button");
 
-openModal.addEventListener("click", () => {
+freeBtn.addEventListener("click", () => {
+  modal.showModal();
+});
+
+checkService.addEventListener("click", () => {
   modal.showModal();
 });
 
