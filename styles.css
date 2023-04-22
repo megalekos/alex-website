@@ -315,7 +315,11 @@ nav a {
   #spider-section img {
     grid-column-start: 3;
   }
-
+  #freelance-section {
+    grid-column-end: 3;
+    margin-right: 0;
+    margin-left: 3rem;
+  }
   #freelance-section p {
     grid-column-start: 2;
     grid-column-end: span 2;
