@@ -40,3 +40,65 @@ checkService.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   modal.close();
 });
+
+//show mobile menu
+const menu = document.querySelector("nav");
+const menuHandle = document.querySelector(".menu-slider");
+
+if (window.innerWidth < 548) {
+  menu.classList.add("to_side");
+}
+
+menuHandle.addEventListener("click", () => {
+  menu.classList.toggle("to_side");
+});
+
+//render marker on menu
+//WONT WORK. need to match currentMenuItem with currentSection
+let currentSection;
+let currentMenuItem;
+let selectedMenuItem;
+
+const menuItems = document.querySelectorAll("nav > a");
+const sections = document.querySelectorAll(".project");
+const menuList = [];
+const sectionList = [];
+
+function handleMenu() {
+  for (let i = 0; i < sections.length; i++) {
+    currentSection = sections[i];
+    // sectionList.push(currentSection.dataset.id);
+    // console.log(currentSection.dataset.id);
+    for (let i = 0; i < menuItems.length; i++) {
+      currentMenuItem = menuItems[i];
+      // console.log("menu item data" + menuItems[i].dataset.id);
+      // menuList.push(menuItems[i].dataset.id);
+      if (
+        isInViewport(currentSection) &&
+        currentMenuItem.dataset.id === currentSection.dataset.id
+      ) {
+        selectedMenuItem = currentMenuItem;
+        selectedMenuItem.style.textDecoration = "underline";
+        // console.log(currentSection.id + " in view");
+        // console.log(selectedMenuItem);
+        // console.log("type" + typeof selectedMenuItem);
+      } else if (
+        !isInViewport(currentSection) &&
+        currentMenuItem.dataset.id === currentSection.dataset.id
+      ) {
+        // currentMenuItem.style.textDecoration = "";
+        selectedMenuItem = currentMenuItem;
+        selectedMenuItem.style.textDecoration = "";
+
+        // console.log(selectedMenuItem + "test");
+      }
+    }
+  }
+}
+
+function handleMenu2(el) {
+  selectedMenuItem = el;
+  selectedMenuItem.style.textDecoration = "underline";
+}
+menuItems.forEach((el) => el.addEventListener("click", handleMenu2(el)));
+document.addEventListener("scroll", handleMenu);
