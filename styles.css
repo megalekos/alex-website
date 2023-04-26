@@ -11,7 +11,8 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   grid-auto-rows: min-content;
   row-gap: 50px;
-  column-gap: 20px;
+  column-gap: 35px;
+  scroll-padding: 5em;
 }
 h1 {
   font-size: 3rem;
@@ -38,7 +39,6 @@ img {
   grid-column-start: 2;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  scroll-padding: 5em;
 }
 header {
   display: grid;
@@ -101,6 +101,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 2fr;
+  gap: 2rem;
   border-radius: 24px;
   border: none;
   overflow: scroll;
@@ -191,7 +192,11 @@ nav a {
   place-self: center;
 }
 #spider-section p {
-  grid-column: 1/3;
+  min-width: 20ch;
+}
+#spider-section img {
+  /* grid-column: 2/3; */
+  max-width: 400px;
 }
 
 #freelance-section {
@@ -241,7 +246,7 @@ nav a {
   grid-column-start: 2;
 }
 #quince {
-  grid-template-rows: 1rem 1fr;
+  /* grid-template-rows: 1rem 1fr; */
   justify-items: start;
 }
 #quince img {
@@ -407,7 +412,7 @@ nav a {
   #title-section,
   #writing,
   #close-off {
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-right: 1rem;
   }
 
@@ -477,6 +482,10 @@ nav a {
   #graphic-design > * {
     grid-column-start: unset;
   }
+  #spider-section img,
+  #quince img {
+    max-width: 300px;
+  }
   #writing > * {
     grid-column-start: 1;
     grid-row-start: unset;
@@ -487,6 +496,7 @@ nav a {
     grid-auto-rows: max-content;
     gap: 1rem;
     padding-left: 3rem;
+    /* max-width: 70%; */
   }
   #close-off > * {
     grid-column-start: 1;
