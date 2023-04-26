@@ -42,14 +42,17 @@ const closeModal = document.querySelector("#close-button");
 
 freeBtn.addEventListener("click", () => {
   modal.showModal();
+  document.querySelector("body").style.overflow = "hidden";
 });
 
 checkService.addEventListener("click", () => {
   modal.showModal();
+  document.querySelector("body").style.overflow = "hidden";
 });
 
 closeModal.addEventListener("click", () => {
   modal.close();
+  document.querySelector("body").style.overflow = "visible";
 });
 
 //show mobile menu
