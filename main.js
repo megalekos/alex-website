@@ -1,12 +1,23 @@
 //hide and show freelance button
+function pxToVh(px) {
+  const vh = window.innerHeight / 100;
+
+  return Math.floor(px / vh);
+}
+// console.log(pxToVh(500));
+
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
+
+  const yCenter = (rect.top + rect.bottom) / 2;
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    yCenter >= 0 + pxToVh(200) &&
+    // rect.left >= 0 &&
+    yCenter <=
+      (window.innerHeight || document.documentElement.clientHeight) -
+        pxToVh(200)
+    //   &&
+    // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 

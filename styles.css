@@ -38,7 +38,7 @@ img {
   grid-column-start: 2;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  scroll-padding: 2em;
+  scroll-padding: 5em;
 }
 header {
   display: grid;
