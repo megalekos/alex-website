@@ -44,10 +44,14 @@ closeModal.addEventListener("click", () => {
 //show mobile menu
 const menu = document.querySelector("nav");
 const menuHandle = document.querySelector(".menu-slider");
-
-if (window.innerWidth < 548) {
-  menu.classList.add("to_side");
-}
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 548) {
+    menu.classList.add("to_side");
+  }
+  if (window.innerWidth > 548) {
+    menu.classList.remove("to_side");
+  }
+});
 
 menuHandle.addEventListener("click", () => {
   menu.classList.toggle("to_side");
