@@ -47,6 +47,7 @@ header {
   grid-template-rows: 1fr 1fr 1fr;
   height: 90vh;
   width: 95%;
+  margin-top: 10vh;
 }
 .blurb {
   display: grid;
