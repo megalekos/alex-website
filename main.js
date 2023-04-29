@@ -58,14 +58,18 @@ closeModal.addEventListener("click", () => {
 //show mobile menu
 const menu = document.querySelector("nav");
 const menuHandle = document.querySelector(".menu-slider");
-window.addEventListener("resize", function () {
+function slideMenu() {
   if (window.innerWidth < 548) {
     menu.classList.add("to_side");
   }
   if (window.innerWidth > 548) {
     menu.classList.remove("to_side");
   }
-});
+}
+
+window.addEventListener("DOMContentLoaded", slideMenu);
+
+window.addEventListener("resize", slideMenu);
 
 menuHandle.addEventListener("click", () => {
   menu.classList.toggle("to_side");
