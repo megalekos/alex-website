@@ -11,18 +11,44 @@ body {
 
 h1 {
   font-size: 3rem;
+  border-bottom: 2px solid black;
 }
 h2 {
   margin-bottom: 1rem;
 }
 
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.font-size-70percent {
+  font-size: 70%;
+}
+
 p {
   max-width: 60ch;
   line-height: 1.4375rem;
+  margin-bottom: 1rem;
 }
 
 img {
   height: fit-content;
+  max-width: 400px;
+  margin-inline: auto;
+  display: block;
+  margin-block: 2rem;
+}
+
+li {
+  margin-inline: 3rem;
+  padding-inline: 1rem;
+  max-width: 30ch;
+  margin-bottom: 1rem;
 }
 
 .project-content,
@@ -34,9 +60,6 @@ img {
   background-color: white;
 }
 .hero {
-  /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2rem; */
   display: flex;
   margin-top: 3rem;
   padding-inline: 2rem;
@@ -45,6 +68,7 @@ img {
 .wrapper {
   background-color: #c3ffbd;
   padding-bottom: 2rem;
+  padding-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -64,6 +88,27 @@ img {
   text-decoration: none;
   display: inline;
   line-break: strict;
+  color: black;
+}
+
+.conclusion {
+  background-color: antiquewhite;
+  /* max-width: 50%; */
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding: 1rem;
+  border-radius: 25px;
+}
+.conclusion p {
+  max-width: 35ch;
+  margin-inline: auto;
+}
+.conclusion h2 {
+  text-align: center;
+}
+
+#steps-img {
+  max-width: 20rem;
 }
 
 @media screen and (max-width: 548px) {
@@ -78,7 +123,8 @@ img {
   .hero img {
     margin-inline: auto;
     margin-bottom: 2rem;
-    margin-top: 0;
+    padding-top: 1rem;
+    max-width: 70%;
   }
   .back-link {
     grid-column-start: 2;

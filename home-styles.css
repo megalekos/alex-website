@@ -260,6 +260,10 @@ nav a {
   padding: 1rem;
 }
 
+#check-service:hover {
+  outline: #a1ff99 20px solid;
+}
+
 #haaartland p {
   grid-column-start: 2;
 }
